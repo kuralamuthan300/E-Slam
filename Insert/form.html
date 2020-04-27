@@ -63,7 +63,7 @@
         <center>
             <h1>Birthday hunt</h1>
         </center>
-        <form action="./insert.php" method="POST">
+        <form action="./insert.php" method="POST" enctype="multipart/form-data">
 
 
 
@@ -204,9 +204,9 @@
             </div>
             <label for="photo">Photo of you and me </label><br>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7UZV-tbaFPjmJLW_Cy9kGC0HmBE86xg0r2vI6YamM7ueIFx6E&usqp=CAU" width="260px" height="190px" />
-            <input required type="file" name="image" style="color: red;font-weight: bolder;font-size: medium;">
+            <input required type="file" name="fileToUpload" id="fileToUpload" style="color: red;font-weight: bolder;font-size: medium;">
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" name="submit" />
         </form>
     </div>
     <script>
