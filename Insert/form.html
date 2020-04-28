@@ -203,17 +203,76 @@
                 </div>
             </div>
             <label for="photo">Photo of you and me </label><br>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7UZV-tbaFPjmJLW_Cy9kGC0HmBE86xg0r2vI6YamM7ueIFx6E&usqp=CAU" width="260px" height="190px" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7UZV-tbaFPjmJLW_Cy9kGC0HmBE86xg0r2vI6YamM7ueIFx6E&usqp=CAU" width="260px" height="190px" /><br>
+            <br>
+            <div style="color: green;font-weight: bolder;font-size: large;">Max file size 5MB</div>
             <input required type="file" name="fileToUpload" id="fileToUpload" style="color: red;font-weight: bolder;font-size: medium;">
 
-            <input type="submit" value="Submit" name="submit" />
+
+
+
+            <div class="progress">
+                <div class="bar"></div><br> Upload progress:
+                <div class="percent">0%</div>
+                <br>
+            </div>
+
+            <div id="status"></div>
+
+
+
+
+
+
+            <div id="filesizewarning" style="color: red;font-weight: bolder;font-size: large;"></div>
+            <input type="submit" value="Submit" name="submit" id="mySubmit" />
         </form>
     </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        function myFunction() {
-            alert("Re check before Submiting !");
-            return true;
-        }
+        $('#fileToUpload').bind('change', function() {
+
+            //this.files[0].size gets the size of your file.
+
+            if (this.files[0].size > 10174706) {
+                document.getElementById("mySubmit").disabled = true;
+                document.getElementById("filesizewarning").innerHTML = "File size is too large!";
+            } else {
+                document.getElementById("mySubmit").disabled = false;
+                document.getElementById("filesizewarning").innerHTML = "";
+
+            }
+        });
+
+
+
+
+        $(function() {
+
+            var bar = $('.bar');
+            var percent = $('.percent');
+            var status = $('#status');
+
+            $('form').ajaxForm({
+                beforeSend: function() {
+                    status.empty();
+                    var percentVal = '0%';
+                    bar.width(percentVal);
+                    percent.html(percentVal);
+                },
+                uploadProgress: function(event, position, total, percentComplete) {
+                    var percentVal = percentComplete + '%';
+                    bar.width(percentVal);
+                    percent.html(percentVal);
+                },
+                complete: function(xhr) {
+                    status.html(xhr.responseText);
+                }
+            });
+        });
     </script>
 </body>
 

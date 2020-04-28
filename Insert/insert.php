@@ -2,7 +2,7 @@
 require("connection.php");
 
 //File upload
-$target_dir = "uploads/";
+$target_dir = "/htdocs/response/uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -34,8 +34,8 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-
+        echo "<center><h1 style=\"color:green;\">The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.</h1></center>";
+rename("/htdocs/response/uploads/".basename( $_FILES["fileToUpload"]["name"]),"/htdocs/response/uploads/".$_POST["phone"].".jpg");
         
 $formdata = array($_POST["hint"],$_POST["ques1"],$_POST["ques2"],$_POST["ques3"],$_POST["ques4"],$_POST["ques5"],$_POST["ques6"],$_POST["ques7"],$_POST["ques8"],$_POST["ques9"],$_POST["ques10"],$_POST["ques11"],$_POST["ques12"],$_POST["ques13"],$_POST["ques14"],basename( $_FILES["fileToUpload"]["name"]),$_POST["phone"]);
 $sql = "INSERT INTO `response` (`solved`, `hint`, `ques1`, `ques2`, `ques3`, `ques4`, `ques5`, `ques6`, `ques7`, `ques8`, `ques9`, `ques10`, `ques11`, `ques12`, `ques13`, `ques14`, `photo`, `phone`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";

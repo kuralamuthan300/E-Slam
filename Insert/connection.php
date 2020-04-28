@@ -1,17 +1,17 @@
 <?php
 
-/*
+
 $servername = "sql311.epizy.com";
 $username = "epiz_25621024";
 $password = "CCt5XuZLbQG";
 $dbname = "epiz_25621024_birthday";
-*/
 
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "birthdayhunt";
-
+*/
 /*
 DB create SQL
 
