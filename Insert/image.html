@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    input[type="text"],
+    input[type="submit"],
+    input[type="file"],
+    select,
+    textarea {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h1,h3{
+        font-weight: bolder;
+    }
+    label {
+        font-weight: bolder;
+        padding: 12px 12px 12px 12px;
+        display: inline-block;
+        font-size: large;
+    }
+    
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: center;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .container {
+        border-radius: 5px;
+        padding: 20px;
+    }
+    
+    .col-100 {
+        float: left;
+        width: 100%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+</style>
+
+<body>
+
+    <form action="imageupload.php" method="post" enctype="multipart/form-data">
+        <center>
+            <h1>Photo of you and me </h1><br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7UZV-tbaFPjmJLW_Cy9kGC0HmBE86xg0r2vI6YamM7ueIFx6E&usqp=CAU" width="260px" height="190px" /><br>
+            <br>
+            <div style="color: green;font-weight: bolder;font-size: large;">Max file size 5MB</div>
+            <center><input required type="file" name="fileToUpload" id="fileToUpload" style="color: red;font-weight: bolder;font-size: medium;">
+            </center>
+            <div id="filesizewarning" style="color: red;font-weight: bolder;font-size: large;"></div>
+            <br>
+            <br>
+            <h3>Phone number</h3>
+            <input type="text" name="phone" required/><br>
+            <input type="submit" value="Upload image " name="submit" id="mySubmit" />
+        </center>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#fileToUpload').bind('change', function() {
+
+            //this.files[0].size gets the size of your file.
+
+            if (this.files[0].size > 10174706) {
+                document.getElementById("mySubmit").disabled = true;
+                document.getElementById("filesizewarning").innerHTML = "File size is too large!<br>Select another photo.";
+                document.getElementById("mySubmit").style.backgroundColor = "red";
+
+            } else {
+                document.getElementById("mySubmit").disabled = false;
+                document.getElementById("filesizewarning").innerHTML = "";
+                document.getElementById("mySubmit").style.backgroundColor = "green";
+
+
+            }
+        });
+    </script>
+</body>
+
+</html>
