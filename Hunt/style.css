@@ -52,7 +52,7 @@ input[type="text"] {
 }
 
 .hint {
-  font-size: x-large;
+  font-size: large;
   font-family: "Jost", sans-serif;
 }
 
@@ -83,7 +83,7 @@ input[type="text"] {
 }
 @media only screen and (max-width: 600px) {
   .title {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 .tracking-in-contract-bck-top {
