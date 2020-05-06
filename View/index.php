@@ -132,7 +132,7 @@ $conn->close();
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <h3>If I you are in jail</h3>
+                <h3>If you are in jail</h3>
                 <img class="ques_img" src="./img/jail.jpg" alt="wonderwomen">
             </div>
             <div class="flip-card-back">
@@ -143,7 +143,7 @@ $conn->close();
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <h3>Super power </h3>
+                <h3>I would offer u this super power </h3>
                 <img class="ques_img" src="./img/superpower.jpg" alt="wonderwomen">
             </div>
             <div class="flip-card-back">
@@ -179,7 +179,7 @@ $conn->close();
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <h3>Apology for you</h3>
+                <h3>An Apology i would like to make to you</h3>
                 <img class="ques_img" src="./img/apology.jpg" alt="wonderwomen">
             </div>
             <div class="flip-card-back">
@@ -190,7 +190,7 @@ $conn->close();
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <h3>"glad u are in my life" Moment</h3>
+                <h3>"Glad u are in my life !" Moment</h3>
                 <img class="ques_img" src="./img/glad.jpg" alt="wonderwomen">
             </div>
             <div class="flip-card-back">
@@ -202,7 +202,7 @@ $conn->close();
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <h3>How important you to me</h3>
+                <h3>Importance of you in my life</h3>
                 <img class="ques_img" src="./img/important.gif" alt="wonderwomen">
             </div>
             <div class="flip-card-back">
