@@ -76,7 +76,6 @@ $conn->close();
     $image_path = "../Insert/uploads/";
     $image_path = $image_path.$phone;
     $image_path = $image_path.".jpg";
-    echo($image_path);
     if (file_exists($image_path)) {
 
         $img_tag = "<div class=\"flip-card\">
