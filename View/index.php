@@ -70,6 +70,33 @@ $conn->close();
         </div>
     </div>
 
+
+    <?php
+
+    $image_path = "../Insert/uploads/";
+    $image_path = $image_path.$phone;
+    $image_path = $image_path.".jpg";
+    echo($image_path);
+    if (file_exists($image_path)) {
+
+        $img_tag = "<div class=\"flip-card\">
+        <div class=\"flip-card-inner\">
+            <div class=\"flip-card-front\">
+                <h3>Most memorable photo with you</h3>
+                <img class=\"ques_img\" src=\"./img/uandme.jpg\" alt=\"uandme\">
+            </div>
+            <div class=\"flip-card-back\">
+                <img class=\"weImg\" src=\"".$image_path."\">
+            </div>
+        </div>
+    </div>";
+
+    echo($img_tag);
+    }
+
+    ?>
+
+
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -81,6 +108,7 @@ $conn->close();
             </div>
         </div>
     </div>
+
 
     <div class="flip-card">
         <div class="flip-card-inner">

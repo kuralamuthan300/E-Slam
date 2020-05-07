@@ -64,6 +64,11 @@ h3 {
     width: 80vw;
     height: 60vh;
   }
+  .weImg{
+    width: 80vw;
+    height: 60vh;
+    padding: 10px;
+  }
   .flip-card-back {
     overflow: scroll;
   }
@@ -134,4 +139,12 @@ img {
   z-index: -10;
   top: 0;
   left: 0;
+}
+
+.weImg{
+  object-fit: contain;
+  width: 75vw;
+  height: 50vh;
+  padding: 10px;
+
 }
