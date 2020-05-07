@@ -10,7 +10,9 @@ if(check(trim($_POST["phone"]))){
     $val = 0;
     $stmt->bind_param("issssssssssssssss", $val, $formdata[0], $formdata[1], $formdata[2], $formdata[3], $formdata[4], $formdata[5], $formdata[6], $formdata[7], $formdata[8], $formdata[9], $formdata[10], $formdata[11], $formdata[12], $formdata[13], $formdata[14], $formdata[15]);
     if ($stmt->execute()) {
-        echo("<center><h1 style=\"color:green;font-weight:bolder;\">Your response saved successfully !<br><br></h1><br><br>");
+        echo("<center><h1 style=\"color:green;font-weight:bolder;\">Your response saved successfully !<br><br></h1><br><br><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7UZV-tbaFPjmJLW_Cy9kGC0HmBE86xg0r2vI6YamM7ueIFx6E&usqp=CAU\" width=\"260px\" height=\"190px\" /><br>
+        </center>");
+        echo("<br><br><br><center><h1 style=\"color:green;font-weight:bolder;\"><a href=\"./image.html\">Click here to upload photo of me and You</a><br><br></h1></center>");
     } else  echo ("<center><h1 style=\"color:red;font-weight:bolder;\">Error Occoured ! Go back and try again .<br><br></h1></center>");
     
     

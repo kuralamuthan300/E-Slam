@@ -2,6 +2,7 @@ body {
   font-family: "Jost", sans-serif;
   background-color: black;
   overflow: auto;
+  overflow-wrap: break-word;
 }
 h3 {
   color: white;
@@ -68,9 +69,14 @@ h3 {
   }
   .sticky {
     width: 90vw;
+    font-size: medium;
   }
   p{
     font-size: large;
+  }
+  .sticky{
+    width: 80vw;
+    font-size: 20px;
   }
   
 }
@@ -105,6 +111,9 @@ img {
   background-color: rgba(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
+  width: 75vw;
+  overflow: auto;
+  overflow-wrap: break-word;
   
 }
 
