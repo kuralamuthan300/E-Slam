@@ -3,7 +3,7 @@
 /// Server directory : htdocs/response/uploads
 $target_dir = "./uploads/";
 $phone_trim = trim($_POST["phone"]);
-echo("<title>Madhu image</title>");
+echo("<title>Alice image</title>");
 if (check($phone_trim)) {
 
     if (file_exists($target_dir . $phone_trim . ".jpg")) {
